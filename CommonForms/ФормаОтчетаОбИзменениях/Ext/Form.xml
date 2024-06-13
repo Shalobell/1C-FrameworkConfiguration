@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="Декорация1" id="1">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эти документы были изменены:</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="3"/>
+		</LabelDecoration>
+		<Table name="ТЗРасходнаяНакладная" id="4">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТЗРасходнаяНакладная</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТЗРасходнаяНакладнаяКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ТЗРасходнаяНакладнаяКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТЗРасходнаяНакладнаяРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ТЗРасходнаяНакладнаяСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ТЗРасходнаяНакладная</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЗРасходнаяНакладнаяСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТЗРасходнаяНакладнаяСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТЗРасходнаяНакладнаяСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ТЗРасходнаяНакладная</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЗРасходнаяНакладнаяСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТЗРасходнаяНакладнаяСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТЗРасходнаяНакладнаяУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ТЗРасходнаяНакладная</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТЗРасходнаяНакладнаяУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТЗРасходнаяНакладнаяУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТЗРасходнаяНакладнаяДокумент" id="17">
+					<DataPath>ТЗРасходнаяНакладная.Документ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТЗРасходнаяНакладнаяДокументКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТЗРасходнаяНакладнаяДокументРасширеннаяПодсказка" id="19"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Button name="Закрыть" id="20">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<CommandName>Form.StandardCommand.Close</CommandName>
+			<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="21"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТЗРасходнаяНакладная" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗРасходная накладная</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Документ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПриходнаяНакладная</v8:Type>
+						<v8:Type>cfg:DocumentRef.РасходнаяНакладная</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Закрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Закрыть</Action>
+		</Command>
+	</Commands>
+</Form>

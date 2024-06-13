@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="НачалоПериода" id="1">
+			<DataPath>Объект.НачалоПериода</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="КонецПериода" id="4">
+			<DataPath>Объект.КонецПериода</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КонецПериодаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КонецПериодаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Button name="Подобрать" id="29">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Подобрать</CommandName>
+			<ExtendedTooltip name="ПодобратьРасширеннаяПодсказка" id="30"/>
+		</Button>
+		<Table name="РасходныеНакладные" id="7">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.РасходныеНакладные</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РасходныеНакладныеКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="РасходныеНакладныеКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РасходныеНакладныеРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="РасходныеНакладныеСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>РасходныеНакладные</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходныеНакладныеСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="РасходныеНакладныеСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РасходныеНакладныеСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>РасходныеНакладные</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходныеНакладныеСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="РасходныеНакладныеСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РасходныеНакладныеУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>РасходныеНакладные</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходныеНакладныеУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="РасходныеНакладныеУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РасходныеНакладныеНомерСтроки" id="20">
+					<DataPath>Объект.РасходныеНакладные.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасходныеНакладныеНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РасходныеНакладныеНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="РасходныеНакладныеРасходнаяНакладная" id="23">
+					<DataPath>Объект.РасходныеНакладные.РасходнаяНакладная</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РасходныеНакладныеРасходнаяНакладнаяКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РасходныеНакладныеРасходнаяНакладнаяРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="РасходныеНакладныеСумма" id="26">
+					<DataPath>Объект.РасходныеНакладные.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РасходныеНакладныеСуммаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РасходныеНакладныеСуммаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПодборРасходныхНакладных</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Подобрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подобрать</Action>
+		</Command>
+	</Commands>
+</Form>
